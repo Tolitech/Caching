@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageIconUrl>http://www.tolitech.com.br/images/icon.png</PackageIconUrl>
+    <Authors>Eduardo Tolino</Authors>
+    <Company>Tolitech</Company>
+    <Product>Tolitech Code Generator</Product>
+    <PackageProjectUrl>https://www.codegenerator.com.br/</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/tolitech/caching</RepositoryUrl>
+    <RepositoryType>github</RepositoryType>
+    <PackageTags>caching</PackageTags>
+    <PackageReleaseNotes>More information at http://www.codegenerator.com.br/</PackageReleaseNotes>
+    <Copyright />
+    <Description>Library to make it easier to manage cache information in applications created by Tolitech Code Generator.</Description>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <Version>1.0.0-alpha1</Version>
+  </PropertyGroup>
+
+</Project>
