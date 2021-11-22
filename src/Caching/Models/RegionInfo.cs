@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace Tolitech.CodeGenerator.Caching.Models
 {
@@ -28,7 +26,7 @@ namespace Tolitech.CodeGenerator.Caching.Models
             _caches.Remove(cache);
         }
 
-        internal CacheInfo GetCache(string key)
+        internal CacheInfo? GetCache(string key)
         {
             return _caches.FirstOrDefault(x => x.Key.ToLower() == key.ToLower());
         }

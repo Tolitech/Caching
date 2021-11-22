@@ -1,2 +1,4 @@
-# Caching
-Caching library for Tolitech Code Generator.
+# Tolitech.CodeGenerator.Caching
+Caching library used in projects created by the Code Generator tool.
+
+
