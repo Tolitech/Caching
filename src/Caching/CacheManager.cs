@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using Microsoft.Extensions.Caching.Memory;
 using Tolitech.CodeGenerator.Caching.Models;
 
@@ -27,7 +25,7 @@ namespace Tolitech.CodeGenerator.Caching
             lock (_regions)
             {
                 // Adding the region if it does not already exist.
-                RegionInfo region = _regions
+                var region = _regions
                     .Where(x => x.RegionName.ToLower() == regionName.ToLower())
                     .FirstOrDefault();
 
@@ -38,7 +36,7 @@ namespace Tolitech.CodeGenerator.Caching
                 }
 
                 // Adding the key name if it does not already exist.
-                CacheInfo cacheInfo = region.Caches
+                var cacheInfo = region.Caches
                     .Where(x => x.Key.ToLower() == keyName.ToLower())
                     .FirstOrDefault();
 
@@ -129,12 +127,12 @@ namespace Tolitech.CodeGenerator.Caching
             lock (_regions)
             {
                 // Getting region and key name.
-                string[] keys = key
+                var keys = key
                     .ToString()
                     .Split(new string[] { demiliter }, StringSplitOptions.None);
 
                 // Getting the region.
-                RegionInfo region = _regions
+                var region = _regions
                     .Where(x => x.RegionName.ToLower() == keys[0].ToLower())
                     .FirstOrDefault();
 
