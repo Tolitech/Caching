@@ -127,17 +127,17 @@ namespace Tolitech.CodeGenerator.Caching.Tests
         [Fact(DisplayName = "CacheManager - Refresh - Valid")]
         public void CacheManager_Refresh_Valid()
         {
-            const string regionName1 = "RegionName1";
-            const string keyName1 = "KeyName1";
-            const string value1 = "Hello Cache 1";
+            const string regionName = "RegionName";
+            const string keyName = "KeyName";
+            const string value = "Hello Cache";
 
-            CacheManager.Add(regionName1, keyName1, value1, TimeSpan.FromSeconds(10));
+            CacheManager.Add(regionName, keyName, value, TimeSpan.FromSeconds(10));
             var regions = CacheManager.Regions;
 
-            CacheManager.Add(regionName1, keyName1, value1, TimeSpan.FromSeconds(0));
+            CacheManager.Add(regionName, keyName, value, TimeSpan.FromSeconds(0));
             CacheManager.Refresh();
 
-            Assert.True(CacheManager.Get(regionName1, keyName1) == null);
+            Assert.True(CacheManager.Get(regionName, keyName) == null);
         }
     }
 }
