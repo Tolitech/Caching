@@ -128,7 +128,7 @@ namespace Tolitech.CodeGenerator.Caching
             {
                 // Getting region and key name.
                 var keys = key
-                    .ToString()
+                    .ToString()!
                     .Split(new string[] { demiliter }, StringSplitOptions.None);
 
                 // Getting the region.

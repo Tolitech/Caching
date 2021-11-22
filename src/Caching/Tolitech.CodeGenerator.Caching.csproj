@@ -4,7 +4,25 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Version>2.0.0-alpha-1</Version>
+    <Authors>Tolitech</Authors>
+    <Description>Caching library for Tolitech Code Generator.</Description>
+    <PackageProjectUrl>https://www.tolitech.com.br</PackageProjectUrl>
+    <PackageIcon>icon.png</PackageIcon>
+    <RepositoryUrl>https://github.com/tolitech/caching</RepositoryUrl>
+    <RepositoryType>github</RepositoryType>
+    <PackageTags>caching</PackageTags>
+    <PackageReleaseNotes>More information at http://www.tolitech.com.br</PackageReleaseNotes>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\..\..\icon.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="6.0.0" />
