@@ -17,7 +17,7 @@ namespace Tolitech.CodeGenerator.Caching
             _regions = new List<RegionInfo>();
         }
 
-        public static void Add(string regionName, string keyName, object item, TimeSpan ts)
+        public static void Add(string regionName, string keyName, object? item, TimeSpan ts)
         {
             if (string.IsNullOrEmpty(keyName))
                 return;

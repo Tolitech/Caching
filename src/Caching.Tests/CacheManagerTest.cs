@@ -132,7 +132,6 @@ namespace Tolitech.CodeGenerator.Caching.Tests
             const string value = "Hello Cache";
 
             CacheManager.Add(regionName, keyName, value, TimeSpan.FromSeconds(10));
-            var regions = CacheManager.Regions;
 
             CacheManager.Add(regionName, keyName, value, TimeSpan.FromSeconds(0));
             CacheManager.Refresh();
